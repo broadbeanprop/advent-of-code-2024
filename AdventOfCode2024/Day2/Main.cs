@@ -29,7 +29,7 @@ public partial class Main
             for (var i = 0; i < report.Levels.Count; i++)
             {
                 var levels = new List<int>(report.Levels);
-                levels.Remove(levels[i]);
+                levels.RemoveAt(i);
 
                 if (!IsReportSafe(levels))
                     continue;

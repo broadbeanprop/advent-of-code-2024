@@ -8,8 +8,6 @@ public class Day2Tests
     [InlineData(@"Day2/example_input.txt", 2)]
     [InlineData(@"Day2/input.txt", 534)]
     [InlineData(@"Day2/example_input.txt", 4, true)]
-
-    // TODO: Revisit, this one is off by 2 reports and I couldn't figure out why
     [InlineData(@"Day2/input.txt", 577, true)]
     public void Part1And2(string fileName, int expectedSafeReports, bool applyProblemDampener = false)
     {
