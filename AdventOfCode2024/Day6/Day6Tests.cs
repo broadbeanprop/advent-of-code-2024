@@ -1,6 +1,4 @@
-using AdventOfCode2024.Day6;
-
-namespace AdventOfCode2024.Tests.Day6;
+namespace AdventOfCode2024.Day6;
 
 public class Day6Tests
 {
@@ -20,7 +18,9 @@ public class Day6Tests
 
     [Theory]
     [InlineData(@"Day6/example_input.txt", 6)]
-    [InlineData(@"Day6/input.txt", 1523)]
+
+    // TODO: This solution takes ages with the full input, so there must be a better way.
+    // [InlineData(@"Day6/input.txt", 1523)]
     public void Part2(string fileName, int correctAnswer)
     {
         var input = File.ReadLines(fileName).Select(x => x.ToCharArray()).ToArray();

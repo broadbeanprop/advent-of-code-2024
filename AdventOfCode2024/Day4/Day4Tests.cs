@@ -1,6 +1,4 @@
-using AdventOfCode2024.Day4;
-
-namespace AdventOfCode2024.Tests.Day4;
+namespace AdventOfCode2024.Day4;
 
 public class Day4Tests
 {

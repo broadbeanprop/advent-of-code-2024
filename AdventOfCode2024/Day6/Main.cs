@@ -67,7 +67,6 @@ public class Main(char[][] input)
         return _visitedPositions.Select(x => new { x.Row, x.Column }).Distinct().Count();
     }
 
-    // TODO: This solution takes ages with the full input, so there must be a better way.
     public int GetAnswerPart2()
     {
         var answer = 0;
