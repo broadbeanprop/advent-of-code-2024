@@ -1,4 +1,6 @@
-﻿namespace AdventOfCode2024.Day6;
+﻿using AdventOfCode2024.Common;
+
+namespace AdventOfCode2024.Day06;
 
 public class Main(char[][] input)
 {
@@ -10,21 +12,14 @@ public class Main(char[][] input)
 
     public void FindCurrentPosition()
     {
-        for (var row = 0; row < _grid.Length; row++)
-        {
-            for (var col = 0; col < _grid[row].Length; col++)
-            {
-                if (!_grid[row][col].Equals('^'))
-                    continue;
+        var point = GridHelper.FindInGrid(_grid, '^').Single();
 
-                _currentPosition.Row = row;
-                _currentPosition.Column = col;
-                _startingPosition.Row = row;
-                _startingPosition.Column = col;
+        _currentPosition.Row = point.Row;
+        _currentPosition.Column = point.Column;
+        _startingPosition.Row = point.Row;
+        _startingPosition.Column = point.Column;
 
-                _visitedPositions.Add((_currentPosition.Row, _currentPosition.Column, Direction.Up));
-            }
-        }
+        _visitedPositions.Add((_currentPosition.Row, _currentPosition.Column, Direction.Up));
     }
 
     public int GetAnswerPart1()
@@ -114,7 +109,7 @@ public class Main(char[][] input)
 
     private (int Row, int Column) GetNextPosition()
     {
-        Movement nextPosition = _currentDirection switch
+        Point nextPosition = _currentDirection switch
         {
             Direction.Up => new Up(_currentPosition.Row, _currentPosition.Column),
             Direction.Right => new Right(_currentPosition.Row, _currentPosition.Column),
@@ -125,12 +120,4 @@ public class Main(char[][] input)
 
         return (nextPosition.Row, nextPosition.Column);
     }
-
-    private enum Direction { Up, Right, Down, Left }
-
-    private record Up(int Row, int Column) : Movement(Row - 1, Column);
-    private record Right(int Row, int Column) : Movement(Row, Column + 1);
-    private record Down(int Row, int Column) : Movement(Row + 1, Column);
-    private record Left(int Row, int Column) : Movement(Row, Column - 1);
-    private abstract record Movement(int Row, int Column);
 }

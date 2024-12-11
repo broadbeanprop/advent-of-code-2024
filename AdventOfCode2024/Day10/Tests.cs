@@ -1,6 +1,6 @@
 namespace AdventOfCode2024.Day10;
 
-public class Day10Tests
+public class Tests
 {
     [Theory]
     [InlineData(@"Day10/example_input.txt", 36)]

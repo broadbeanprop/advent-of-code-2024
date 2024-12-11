@@ -1,30 +1,34 @@
-namespace AdventOfCode2024.Day8;
+namespace AdventOfCode2024.Day04;
 
-public class Day8Tests
+public class Tests
 {
     [Theory]
-    [InlineData(@"Day8/example_input.txt", 14)]
-    [InlineData(@"Day8/input.txt", 301)]
+    [InlineData(@"Day04/example_input.txt", 18)]
+    [InlineData(@"Day04/input.txt", 2414)]
     public void Part1(string fileName, int correctAnswer)
     {
         var input = File.ReadLines(fileName).Select(x => x.ToCharArray()).ToArray();
         Assert.NotEmpty(input);
 
         var main = new Main(input);
-        var actualAnswer = main.GetAnswerPart1();
+
+        var actualAnswer = main.GetWords();
+
         Assert.Equal(correctAnswer, actualAnswer);
     }
 
     [Theory]
-    [InlineData(@"Day8/example_input.txt", 34)]
-    [InlineData(@"Day8/input.txt", 1019)]
+    [InlineData(@"Day04/example_input.txt", 9)]
+    [InlineData(@"Day04/input.txt", 1871)]
     public void Part2(string fileName, int correctAnswer)
     {
         var input = File.ReadLines(fileName).Select(x => x.ToCharArray()).ToArray();
         Assert.NotEmpty(input);
 
         var main = new Main(input);
-        var actualAnswer = main.GetAnswerPart2();
+
+        var actualAnswer = main.GetXMases();
+
         Assert.Equal(correctAnswer, actualAnswer);
     }
 }

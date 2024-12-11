@@ -1,6 +1,7 @@
 ﻿using System.Text.RegularExpressions;
+using AdventOfCode2024.Common;
 
-namespace AdventOfCode2024.Day2;
+namespace AdventOfCode2024.Day02;
 
 public partial class Main
 {
@@ -52,7 +53,7 @@ public partial class Main
 
         for (var i = 1; i < levels.Count; i++)
         {
-            var difference = Difference(levels[i], levels[i - 1]);
+            var difference = NumberHelper.Difference(levels[i], levels[i - 1]);
 
             if (difference is < 1 or > 3)
             {
@@ -74,10 +75,6 @@ public partial class Main
 
             _reports.Add(new Report{ Levels = levels });
         }
-    }
-
-    private static int Difference (int a, int b) {
-        return Math.Max(a,b) - Math.Min(a,b);
     }
 
     [GeneratedRegex(@"\s{1}")]

@@ -1,6 +1,7 @@
 ﻿using System.Text.RegularExpressions;
+using AdventOfCode2024.Common;
 
-namespace AdventOfCode2024.Day1;
+namespace AdventOfCode2024.Day01;
 
 public partial class Main
 {
@@ -22,7 +23,7 @@ public partial class Main
         var length = _orderedLeftList.Length;
         for (var i = 0; i < length; i++)
         {
-            totalDistance += Difference(_orderedLeftList[i], _orderedRightList[i]);
+            totalDistance += NumberHelper.Difference(_orderedLeftList[i], _orderedRightList[i]);
         }
 
         return totalDistance;
@@ -52,10 +53,6 @@ public partial class Main
 
         _orderedLeftList = _leftList.Order().ToArray();
         _orderedRightList = _rightList.Order().ToArray();
-    }
-
-    private static int Difference (int a, int b) {
-        return Math.Max(a,b) - Math.Min(a,b);
     }
 
     [GeneratedRegex(@"\s{3}")]

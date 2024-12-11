@@ -1,6 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 
-namespace AdventOfCode2024.Day3;
+namespace AdventOfCode2024.Day03;
 
 public partial class Main(string input)
 {

@@ -1,12 +1,12 @@
-namespace AdventOfCode2024.Day2;
+namespace AdventOfCode2024.Day02;
 
-public class Day2Tests
+public class Tests
 {
     [Theory]
-    [InlineData(@"Day2/example_input.txt", 2)]
-    [InlineData(@"Day2/input.txt", 534)]
-    [InlineData(@"Day2/example_input.txt", 4, true)]
-    [InlineData(@"Day2/input.txt", 577, true)]
+    [InlineData(@"Day02/example_input.txt", 2)]
+    [InlineData(@"Day02/input.txt", 534)]
+    [InlineData(@"Day02/example_input.txt", 4, true)]
+    [InlineData(@"Day02/input.txt", 577, true)]
     public void Part1And2(string fileName, int expectedSafeReports, bool applyProblemDampener = false)
     {
         var lines = File.ReadLines(fileName).ToArray();

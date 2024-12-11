@@ -1,10 +1,10 @@
-namespace AdventOfCode2024.Day1;
+namespace AdventOfCode2024.Day01;
 
-public class Day1Tests
+public class Tests
 {
     [Theory]
-    [InlineData(@"Day1/example_input.txt", 11)]
-    [InlineData(@"Day1/input.txt", 1830467)]
+    [InlineData(@"Day01/example_input.txt", 11)]
+    [InlineData(@"Day01/input.txt", 1830467)]
     public void Part1(string fileName, int expectedTotalDistance)
     {
         var lines = File.ReadLines(fileName).ToArray();
@@ -17,8 +17,8 @@ public class Day1Tests
     }
 
     [Theory]
-    [InlineData(@"Day1/example_input.txt", 31)]
-    [InlineData(@"Day1/input.txt", 26674158)]
+    [InlineData(@"Day01/example_input.txt", 31)]
+    [InlineData(@"Day01/input.txt", 26674158)]
     public void Part2(string fileName, int expectedSimilarityScore)
     {
         var lines = File.ReadLines(fileName).ToArray();

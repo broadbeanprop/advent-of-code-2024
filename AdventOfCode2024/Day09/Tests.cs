@@ -1,10 +1,10 @@
-namespace AdventOfCode2024.Day9;
+namespace AdventOfCode2024.Day09;
 
-public class Day9Tests
+public class Tests
 {
     [Theory]
-    [InlineData(@"Day9/example_input.txt", 1928)]
-    [InlineData(@"Day9/input.txt", 6360094256423)]
+    [InlineData(@"Day09/example_input.txt", 1928)]
+    [InlineData(@"Day09/input.txt", 6360094256423)]
     public void Part1(string fileName, long correctAnswer)
     {
         var input = File.ReadAllText(fileName);
@@ -16,8 +16,8 @@ public class Day9Tests
     }
 
     [Theory]
-    [InlineData(@"Day9/example_input.txt", 2858)]
-    [InlineData(@"Day9/input.txt", 6379677752410)]
+    [InlineData(@"Day09/example_input.txt", 2858)]
+    [InlineData(@"Day09/input.txt", 6379677752410)]
     public void Part2(string fileName, long correctAnswer)
     {
         var input = File.ReadAllText(fileName);

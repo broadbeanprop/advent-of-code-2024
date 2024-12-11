@@ -1,4 +1,4 @@
-﻿namespace AdventOfCode2024.Day7;
+﻿namespace AdventOfCode2024.Day07;
 
 public class Main(IEnumerable<string> input)
 {

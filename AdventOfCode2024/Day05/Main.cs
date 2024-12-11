@@ -1,4 +1,4 @@
-﻿namespace AdventOfCode2024.Day5;
+﻿namespace AdventOfCode2024.Day05;
 
 public class Main
 {
