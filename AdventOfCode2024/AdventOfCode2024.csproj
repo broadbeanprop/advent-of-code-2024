@@ -21,6 +21,9 @@
     </ItemGroup>
 
     <ItemGroup>
+      <None Update="Common\test_input.txt">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
       <None Update="Day01\example_input.txt">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
@@ -90,7 +93,19 @@
       <None Update="Day11\input.txt">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
-      <None Update="Common\test_input.txt">
+      <None Update="Day12\example_input3.txt">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="Day12\input.txt">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="Day12\example_input2.txt">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="Day12\example_input1.txt">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="Day12\test_input.txt">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
     </ItemGroup>

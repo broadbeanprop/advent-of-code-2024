@@ -30,7 +30,7 @@ public static class GridHelper
 
     public static bool IsWithinBounds<TChar>(TChar[][] grid, int row, int column)
     {
-        return row > -1 && column > -1 && row < grid[0].Length && column < grid.Length;
+        return row > -1 && column > -1 && row < grid.Length && column < grid[0].Length;
     }
 
     public static bool IsCharacterInDirection<TChar>(TChar[][] grid, Point point, TChar character) where TChar : IEquatable<TChar>
